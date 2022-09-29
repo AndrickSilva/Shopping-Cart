@@ -1,49 +1,21 @@
-<div class="container-lg px-4 align-items-center">
-    <h2 class="text-center">Shop Now</h2>
-    <div class="row gap-3 my-5">
+<div class="container-fluid" style="background-color: #1F2024;">
+    <div class="container-lg px-4 align-items-center">
+        <h2 class="text-center text-light py-4 fs-1">Shop Now</h2>
+        <div class="row gap-5 my-5">
 
-        <div class="card col-4" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card col-4 p-0 border-0 rounded-4 overflow-hidden"
+                style="width: 18rem; background-color: #34363A; color: #CDCDCF;" *ngFor="let product of products">
+                <img src={{product.thumbnail}} class="card-img-top" alt="products" style=" height: 13em;">
+                <div class="card-body">
+                    <h5 class="card-title"> {{product.title}} </h5>
+                    <span class="fw-bold "> {{product.brand}} </span>
+                    <p class="card-text my-3"> {{product.description}} </p>
+                    <b>Ratings: <span class="text-success">{{product.rating}}</span></b>
+                    <!-- <button class="btn btn-primary">Buy</button>
+                    <button class="btn btn-warning mx-3">Add to Cart</button> -->
+                </div>
             </div>
-        </div>
-        <div class="card col-4" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card col-4" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card col-4" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's
-                    content.</p>
-                <a href="#" class="btn btn-primary" onclick="getAllUsers()">Go somewhere !!</a>
-            </div>
-        </div>
 
+        </div>
     </div>
-
-
 </div>
