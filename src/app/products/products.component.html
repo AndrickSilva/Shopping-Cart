@@ -1,18 +1,43 @@
-<div class="container-fluid" style="background-color: #1F2024;">
+<div class="container-fluid p-0" style="background-color: #1F2024;">
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-4">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#"> <img src="../assets/images/logo.png" alt="">
+                <p class="d-inline fw-bolder px-1 ">Shop Now</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Cart</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container-lg px-4 align-items-center">
-        <h2 class="text-center text-light py-4 fs-1">Shop Now</h2>
-        <div class="row gap-5 my-5">
+        <h2 class="text-center text-light py-4 fs-1">Order Here</h2>
+        <div class="row gap-5 py-5 justify-content-center align-items-center">
 
             <div class="card col-4 p-0 border-0 rounded-4 overflow-hidden"
                 style="width: 18rem; background-color: #34363A; color: #CDCDCF;" *ngFor="let product of products">
                 <img src={{product.thumbnail}} class="card-img-top" alt="products" style=" height: 13em;">
                 <div class="card-body">
-                    <h5 class="card-title"> {{product.title}} </h5>
-                    <span class="fw-bold "> {{product.brand}} </span>
+                    <div class="d-flex justify-content-between gap-2 pe-4 fw-bold">
+                        <div class="title">
+                            <h5 class="card-title"> {{product.title}} </h5>
+                            <span class="fw-bold "> {{product.brand}} </span>
+                        </div>
+                        <div class="price text-light fst-italic">${{product.price}} </div>
+                    </div>
                     <p class="card-text my-3"> {{product.description}} </p>
-                    <b>Ratings: <span class="text-success">{{product.rating}}</span></b>
-                    <!-- <button class="btn btn-primary">Buy</button>
-                    <button class="btn btn-warning mx-3">Add to Cart</button> -->
+                    <b>Ratings: <span class="text-success"> <img src="../assets/images/star.png" alt="star"
+                                height="15px"> {{product.rating}}</span></b>
+                    <button class="btn btn-primary d-block my-3 px-4 rounded-5 ">Buy</button>
+                    <!--<button class="btn btn-warning mx-3">Add to Cart</button> -->
                 </div>
             </div>
 
