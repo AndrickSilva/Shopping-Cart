@@ -1,5 +1,5 @@
 <div class="container-fluid p-0" style="background-color: #1F2024;">
-    <div class="container-lg px-4 align-items-center pt-5 mt-2">
+    <div class="container-lg px-4 align-items-center ">
         <h2 class="text-center text-light py-4 fs-1">Order Here</h2>
         <div class="row gap-5 py-5 justify-content-center align-items-center">
 
@@ -17,7 +17,8 @@
                     <p class="card-text my-3"> {{product.description}} </p>
                     <b>Ratings: <span class="text-success"> <img src="../assets/images/star.png" alt="star"
                                 height="15px"> {{product.rating}}</span></b>
-                    <button class="btn btn-primary d-block my-3 px-4 rounded-5">Buy</button>
+                    <button class="btn btn-primary d-block my-3 px-4 rounded-5"
+                        routerLink="detail/{{product.id}}">Buy</button>
                     <!--<button class="btn btn-warning mx-3">Add to Cart</button> -->
                 </div>
             </div>
