@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProdApiService } from '../service/prod-api.service';
 import { HttpClient } from '@angular/common/http';
 
 
