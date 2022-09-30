@@ -15,8 +15,8 @@
                         <div class="price text-light fst-italic">${{product.price}} </div>
                     </div>
                     <p class="card-text my-3"> {{product.description}} </p>
-                    <b>Ratings: <span class="text-success"> <img src="../assets/images/star.png" alt="star"
-                                height="15px"> {{product.rating}}</span></b>
+                    <b>Ratings: <span class="text-success"> {{product.rating}} <img src="../assets/images/star.png"
+                                alt="star" height="15px"> </span></b>
                     <button class="btn btn-primary d-block my-3 px-4 rounded-5"
                         routerLink="detail/{{product.id}}">Buy</button>
                     <!--<button class="btn btn-warning mx-3">Add to Cart</button> -->
