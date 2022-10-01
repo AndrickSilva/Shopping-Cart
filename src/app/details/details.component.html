@@ -1,36 +1,29 @@
-<h2 class="py-4 text-center">{{items.title}}</h2>
-<div class="container">
+<div class="container-lg py-5" style="background-color: #34363A;">
+    <h2 class="py-4 text-center text-light">{{items.title}}</h2>
     <div class="row w-100">
         <div class="col-6">
             <ngb-carousel>
-                <ng-template ngbSlide>
+                <ng-template ngbSlide *ngFor="let img of items.images">
                     <div class="picsum-img-wrapper" style="height: 25em;">
-                        <img src="{{items.images[0]}}" alt="Random first slide" style="width: 100%; height: 100%;">
+                        <img src="{{img}}" alt="Random first slide" style="width: 100%; height: 100%;">
                     </div>
                 </ng-template>
-                <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper" style="height: 25em;">
-                        <img src="{{ items.images[1] }}" alt="Random second slide" style="width: 100%; height: 100%;">
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper" style="height: 25em;">
-                        <img src="{{ items.images[2] }}" alt="Random third slide" style="width: 100%; height: 100%;">
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper" style="height: 25em;">
-                        <img src="{{ items.images[3] }}" alt="Random third slide" style="width: 100%; height: 100%;">
-                    </div>
-                </ng-template>
+
             </ngb-carousel>
         </div>
 
         <div class="col-6">
-            <h3>{{items.title}}</h3>
+            <h3 class=" text-light py-2">{{items.title}}</h3>
             <b><span class="badge text-light bg-success border-5"> {{items.rating}} <img src="../assets/images/star.png"
                         alt="star" height="15px"> </span></b>
-            <p class="text-success"> {{items.price }} </p>
+            <div class="d-flex align-items-end gap-1">
+                <p class="text-light pt-3 fs-4"> <b> {{items.price | currency: 'USD' }} </b> <s class="fs-6"> $1000 </s>
+                </p>
+                <span class="text-success py-3 ">{{items.discountPercentage}}% off</span>
+            </div>
+
+            <p class="text-danger"> Hurry up only {{items.stock}} left 😪</p>
         </div>
+
     </div>
 </div>

@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   itemId!: string | null
-  Url: string = 'http://localhost:3000/products/'
+  Url: string = 'http://localhost:3000/products/1'  //change url
   newUrl!: string
   items!: any
 
@@ -28,6 +28,7 @@ export class DetailsComponent implements OnInit {
 
   }
   getProduct() {
-    return this.http.get(this.newUrl)
+    return this.http.get(this.Url)
+    // return this.http.get(this.newUrl) //original url
   }
 }
