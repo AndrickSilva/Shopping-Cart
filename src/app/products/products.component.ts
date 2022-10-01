@@ -9,6 +9,8 @@ export class ProductsComponent implements OnInit {
 
   constructor(private service: ProdApiService) { }
 
+  readMore: boolean = false
+
   ngOnInit(): void {
     this.getAllProducts()
   }
