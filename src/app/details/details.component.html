@@ -1,9 +1,9 @@
-<div class="container-fluid d-flex justify-content-center align-items-center"
-    style="background-color: #34363A; min-height: 85vh;">
+<div class="container-fluid d-flex justify-content-center align-items-center py-5"
+    style="background-color: #34363A; min-height: 100vh;">
     <div class="container-lg py-5">
         <!-- <h2 class="py-4 text-center text-light">{{items.title}}</h2> -->
         <div class="row w-100">
-            <div class="col-6">
+            <div class=" col-md-6 col-12">
                 <ngb-carousel>
                     <ng-template ngbSlide *ngFor="let img of items.images">
                         <div class="picsum-img-wrapper" style="height: 25em;">
@@ -14,7 +14,7 @@
                 </ngb-carousel>
             </div>
 
-            <div class="col-6">
+            <div class="col-md-6 col-12">
                 <h3 class=" text-light py-2">{{items.title}}</h3>
                 <div class="badge bg-secondary  px-3 py-2 me-2">{{items.brand}}</div>
                 <b><span class="badge text-light bg-success border-5 px-2 py-2"> {{items.rating}} <img
