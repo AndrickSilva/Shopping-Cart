@@ -1,26 +1,27 @@
-<div class="container-fluid py-5" style="background-color: #1F2024; min-height: 100vh;">
+<div class="container-fluid py-5" style="background-color: #565656; min-height: 100vh;">
     <h2 class="text-light text-center pb-4">Check Out!</h2>
-    <div
-        class="container-lg py-5 d-flex justify-content-center align-items-center flex-md-row gap-4 justify-content-around">
+    <div class=" py-5 d-flex justify-content-center align-items-center flex-md-row gap-4 justify-content-around flex-lg-row flex-column-reverse"
+        style="padding: 0 2em;">
 
         <!-- Total Items -->
-        <div class="d-flex card flex-row p-4" style=" color: #CDCDCF; background-color: #34363A">
-            <div class="img-cont h-100">
-                <img src="./assets/images/logo.png" alt="thumbnail" height="13em">
-            </div>
+        <div class="d-flex card flex-row " style=" color: #CDCDCF; background-color: #34363A"
+            *ngFor="let item of cartItem">
+            <img src="{{item.thumbnail}}" alt="thumbnail" style="width: 50%;">
 
-            <div class="d-flex flex-column">
-                <h2>Title</h2>
-                <div class="badge bg-secondary">brand</div>
+            <div class="d-flex flex-column p-4">
+                <h2>{{item.title}}</h2>
+                <div class="badge bg-secondary" style="width: fit-content;">{{item.brand}}</div>
                 <div class="d-flex align-items-end gap-1">
-                    <p class="text-light pt-3 fs-4"> <b>f999 </b> <s class="fs-6 text-secondary">
-                            c1000</s>
+                    <p class="text-light pt-3 fs-4"> <b>{{ finalPrice | currency: 'USD' }} </b> <s
+                            class="fs-6 text-secondary">
+                            {{item.price | currency: 'USD' }}</s>
                     </p>
-                    <span class="text-success py-3 fw-bolder">100% off</span>
+                    <span class="text-success py-3 fw-bolder">{{item.discountPercentage}}% off</span>
                 </div>
+                <p>Delivered By 23th oct 2023</p>
+
             </div>
 
-            <p>Delivered By 23th oct 2023</p>
         </div>
 
         <!-- PRICE DETAILS -->

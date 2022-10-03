@@ -11,4 +11,8 @@ export class ProdApiService {
   getAllProducts() {
     return this.http.get("http://localhost:3000/products")
   }
+
+  getCartItems() {
+    return this.http.get("http://localhost:3000/cart")
+  }
 }
