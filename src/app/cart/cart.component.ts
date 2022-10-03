@@ -10,26 +10,33 @@ import { ProdApiService } from '../service/prod-api.service';
 })
 export class CartComponent implements OnInit {
   cartItem!: any
-  discountedPrice!: any
-  finalPrice!: any
+  total: number = 0;
+  totalPrice: number = 0;
+  totalPercentage: number = 0;
+
   constructor(private route: ActivatedRoute, private service: ProdApiService) { }
 
   ngOnInit(): void {
-    // this.cartItem = this.route.snapshot.paramMap.get("items")
-    // console.log(this.cartItem);
     this.getCartItems()
   }
+
   getCartItems() {
     this.service.getCartItems().subscribe(cartResp => {
       this.cartItem = cartResp;
-      this.discountedPrice = this.percentage(this.cartItem.discountPercentage, this.cartItem.price)
-      this.finalPrice = (this.cartItem.price - this.discountedPrice)
-      console.log(this.finalPrice);
-    })
+      console.log(cartResp);
+
+      this.cartItem.forEach((item: any) => {
+        const price = this.percentage(item.discountPercentage, item.price)
+        this.total += Math.round(+price)
+        this.totalPrice += item.price
+        this.totalPercentage += Math.round(item.discountPercentage)
+      })
+    });
   }
+
   // remove percentage of price
   percentage(percent: number, total: number) {
-    return ((percent / 100) * total).toFixed(2)
+    return ((100 - percent) * total / 100).toFixed(2)
   }
 
 }

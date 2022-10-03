@@ -24,11 +24,7 @@ export class DetailsComponent implements OnInit {
 
     this.getProduct().subscribe(res => {
       this.items = res
-      // console.log(this.items);
-      this.discountedPrice = this.percentage(this.items.discountPercentage, this.items.price)
-      this.finalPrice = (this.items.price - this.discountedPrice)
     });
-
   }
 
   //getting the current product
