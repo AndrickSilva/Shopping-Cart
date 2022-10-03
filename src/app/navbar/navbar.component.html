@@ -10,7 +10,11 @@
         <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link " aria-current="page" routerLink="" routerLinkActive="">Home</a>
-                <a class="nav-link" routerLink="/cart" routerLinkActive="active">Cart</a>
+                <a class="nav-link position-relative" routerLink="/cart" routerLinkActive="active">Cart <span
+                        class="position-absolute top-25 start-100 py-o translate-middle badge rounded-pill bg-danger">
+                        1
+                        <span class="visually-hidden">unread messages</span>
+                    </span></a>
             </div>
         </div>
     </div>
