@@ -18,6 +18,8 @@ export class NavbarComponent implements OnInit {
   getCartItems() {
     this.service.getCartItems().subscribe(cartResp => {
       this.totalItems = cartResp;
+      // this.getCartItems()
+
     });
   }
 }

@@ -1,0 +1,25 @@
+.c-p {
+    padding: 0em 2em;
+}
+
+.img {
+    width: 50%;
+}
+
+@media screen and (max-width: 430px) {
+    .c-p {
+        padding: 0em 0em;
+    }
+
+    .c-w {
+        width: 20em;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .img {
+        width: 100%;
+    }
+}

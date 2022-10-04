@@ -16,4 +16,9 @@ export class ProdApiService {
     return this.http.get("http://localhost:3000/cart")
   }
 
+  //delete cart item
+  deleteCartItems(id: any) {
+    return this.http.delete("http://localhost:3000/cart/" + id)
+  }
+
 }
