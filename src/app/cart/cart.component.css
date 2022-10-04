@@ -6,13 +6,17 @@
     width: 50%;
 }
 
+.c-w {
+    width: 22em;
+}
+
 @media screen and (max-width: 430px) {
     .c-p {
         padding: 0em 0em;
     }
 
     .c-w {
-        width: 20em;
+        width: 21em;
     }
 
 }
