@@ -25,6 +25,8 @@ export class DetailsComponent implements OnInit {
     this.getProduct().subscribe(res => {
       this.items = res
     });
+
+
   }
 
   //getting the current product
@@ -36,4 +38,6 @@ export class DetailsComponent implements OnInit {
   percentage(percent: number, total: number) {
     return ((percent / 100) * total).toFixed(2)
   }
+
+
 }
