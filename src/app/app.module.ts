@@ -24,7 +24,6 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
