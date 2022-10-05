@@ -10,15 +10,22 @@
     width: 22em;
 }
 
+.i-c {
+    width: 75%;
+}
+
 @media screen and (max-width: 430px) {
     .c-p {
         padding: 0em 0em;
     }
 
     .c-w {
-        width: 21em;
+        width: 100%;
     }
 
+    .i-c {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 770px) {

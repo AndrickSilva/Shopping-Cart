@@ -1,13 +1,13 @@
 <div class="container-fluid py-5" style="background-color: #565656; min-height: 100vh;">
-    <h2 class="text-light text-center pb-4">Checkout!</h2>
-    <div
-        class="c-p py-5 d-flex justify-content-center align-items-center gap-4 justify-content-around flex-lg-row flex-column-reverse">
+    <h2 class="text-light text-center pb-4 fs-1 fw-bolder">Checkout!</h2>
+    <div class=" c-p py-5 d-flex justify-content-center align-items-center gap-4 justify-content-around flex-lg-row
+        flex-column-reverse">
 
         <!-- Total Items -->
-        <div class="d-flex flex-column gap-3">
+        <div class="d-flex flex-column gap-3 align-items-center">
 
-            <div class="d-flex card flex-md-row overflow-hidden border-0"
-                style=" color: #CDCDCF; background-color: #34363A; min-height: 15em;" *ngFor="let item of cartItem">
+            <div class=" d-flex card flex-md-row overflow-hidden border-0 i-c"
+                style=" color: #CDCDCF; background-color: #34363A;" *ngFor="let item of cartItem">
                 <div class="img"><img src="{{item.thumbnail}}" alt="thumbnail" class="img-fluid" style="height: 100%;">
                 </div>
                 <div class="d-flex flex-column p-4 p-lg-3">
