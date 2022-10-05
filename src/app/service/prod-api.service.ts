@@ -9,16 +9,16 @@ export class ProdApiService {
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
-    return this.http.get("http://192.168.43.36:3000/products")
+    return this.http.get("http://localhost:3000/products")
   }
 
   getCartItems() {
-    return this.http.get("http://192.168.43.36:3000/cart")
+    return this.http.get("http://localhost:3000/cart")
   }
 
   //delete cart item
   deleteCartItems(id: any) {
-    return this.http.delete("http://192.168.43.36:3000/cart/" + id)
+    return this.http.delete("http://localhost:3000/cart/" + id)
   }
 
 }

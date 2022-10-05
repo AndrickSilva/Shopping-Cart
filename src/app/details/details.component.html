@@ -20,8 +20,8 @@
                 <b><span class="badge text-light bg-success border-5 px-2 py-2"> {{items.rating}} <img
                             src="../assets/images/star.png" alt="star" height="15px"> </span></b>
                 <div class="d-flex align-items-end gap-1">
-                    <p class="text-light pt-3 fs-4"> <b>{{ finalPrice | currency: 'USD' }} </b> <s
-                            class="fs-6 text-secondary">
+                    <p class="text-light pt-3 fs-4"> <b>{{ percentage(items.discountPercentage,items.price) |
+                            currency: 'USD' }}</b> <s class="fs-6 text-secondary">
                             {{items.price | currency: 'USD' }}</s>
                     </p>
                     <span class="text-success py-3 fw-bolder">{{items.discountPercentage}}% off</span>

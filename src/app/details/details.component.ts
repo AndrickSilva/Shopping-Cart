@@ -15,9 +15,6 @@ export class DetailsComponent implements OnInit {
   Url: string = 'http://localhost:3000/products/'  //change url
   newUrl!: string
   items!: any
-  discountedPrice!: any
-  finalPrice!: any
-
   ngOnInit(): void {
     this.itemId = this.route.snapshot.paramMap.get("id")
     this.newUrl = `${this.Url}/${this.itemId}`
@@ -25,8 +22,6 @@ export class DetailsComponent implements OnInit {
     this.getProduct().subscribe(res => {
       this.items = res
     });
-
-
   }
 
   //getting the current product
@@ -36,7 +31,7 @@ export class DetailsComponent implements OnInit {
 
   // remove percentage of price
   percentage(percent: number, total: number) {
-    return ((percent / 100) * total).toFixed(2)
+    return ((100 - percent) * total / 100).toFixed(2)
   }
 
 
