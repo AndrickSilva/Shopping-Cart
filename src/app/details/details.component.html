@@ -26,7 +26,7 @@
                     </p>
                     <span class="text-success py-3 fw-bolder">{{items.discountPercentage}}% off</span>
                 </div>
-                <p class="text-danger"> Hurry up only <b>{{items.stock}}</b> left 😪</p>
+                <p class="text-danger"> Hurry up only <b>{{items.stock}}</b> items left 😪</p>
 
                 <div class="text-light">{{items.description}}...read more</div>
 
@@ -36,10 +36,8 @@
                         <img src="../assets/images/lightning-fill.svg" alt="buy Now">
                         Buy Now</button>
                     <button
-                        class="btn bg-warning text-dark border-0 rounded-1 fw-bold d-flex align-items-center gap-1 px-4 py-3"
-                        routerLink="/cart/{{items.title}}">
-                        <img src="../assets/images/cart4.svg" alt="Add to cart">
-                        Add to Cart</button>
+                        class="btn bg-warning text-dark border-0 rounded-1 fw-bold d-flex align-items-center gap-1 px-4 py-3" (click)="postDetails()" [disabled]="cartBtn">
+                        <img src="../assets/images/cart4.svg" alt="Add to cart"> {{cartBtnText}} </button>
                 </div>
             </div>
 
