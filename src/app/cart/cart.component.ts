@@ -31,7 +31,7 @@ export class CartComponent implements OnInit {
         const price = this.percentage(item.discountPercentage, item.price)
         this.total += Math.floor(+price)
         this.totalPrice += item.price
-        this.totalPercentage += Math.round(item.discountPercentage)
+        this.totalPercentage += Math.round(item.discountPercentage/(this.cartItem.length))
       })
     });
   }
