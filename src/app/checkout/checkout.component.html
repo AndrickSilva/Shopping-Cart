@@ -13,17 +13,17 @@
                 <button class="btn btn-primary btn-sm">1</button> <span class="fs-6 ps-3 fw-bold cap text-dark">LOGIN OR SIGNUP</span>
             </ng-template>
           <ng-template ngbPanelContent>
-            <div class="row px-4 py-2">
-                <div class="col-6 d-flex justify-content-center align-items-center flex-column gap-4 px-4">
+            <div class="row px-md-4 py-2">
+                <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center flex-column gap-4 px-4">
                     <input type="text" placeholder="Enter email/mobile number" class="form-control shadow-none rounded-0 border-top-0 border-end-0 border-start-0">
-                    <p class="fs-6 text-secondary">By continuing, you agree to shopNow's Terms of Use and Privacy Policy.</p>
+                    <p class="fs-6 text-secondary">By continuing, you agree to shopNow's <span class="text-primary">Terms of Use</span> and <span class="text-primary">Privacy Policy.</span></p>
                     <button class=" w-100 btn btn-warning rounded-0">Continue</button>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6 pt-4 pt-md-0">
                     <span class="text-secondary fs-6"> Advantages of our secure login</span>
-                    <p class="mt-4"> <fa-icon [icon]="faTruck"></fa-icon> Easily Track Orders, Hassle free Returns</p>
-                    <p> <fa-icon [icon]="faBell"></fa-icon> Get Relevant Alerts and Recommendation</p>
-                    <p><fa-icon [icon]="faStar"></fa-icon> Wishlist, Reviews, Ratings and more.</p>
+                    <p class="text-left mt-4"> <fa-icon [icon]="faTruck"></fa-icon> Easily Track Orders, Hassle free Returns</p>
+                    <p class="text-left"> <fa-icon [icon]="faBell"></fa-icon> Get Relevant Alerts and Recommendation</p>
+                    <p class="text-left"><fa-icon [icon]="faStar"></fa-icon> Wishlist, Reviews, Ratings and more.</p>
                 </div>
             </div>
           </ng-template>
@@ -34,12 +34,29 @@
             <button class="btn btn-primary btn-sm">2</button> <span class="fs-6 ps-3 fw-bold cap text-dark">DELIVERY ADDRESS</span>
           </ng-template>
           <ng-template ngbPanelContent>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+
+            <form action="/">
+            <div class="d-flex justify-content-around flex-wrap align-content-start">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Pincode</label>
+                    <input type="number onwheel= this.blur()" class="form-control" id="exampleFormControlInput1" placeholder="403716">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">State</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Goa">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">City</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Margao">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">HNO</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="1613/2">
+                  </div>
+            </div>
+            <div class="d-flex justify-content-center"><button class="btn btn-primary shadow-0 rounded-0 w-50">Save Address</button></div>
+            </form>
+
           </ng-template>
         </ngb-panel>
 
