@@ -1,8 +1,62 @@
-<div class="container-fluid overflow-hidden" style="background-color: #565656; min-height: 100vh;">
+<div class="container-fluid overflow-hidden py-5" style="background-color: #565656; min-height: 100vh;">
     <!-- <h2 class="text-light text-center pb-4 fs-1 fw-bolder">Thank You!</h2> -->
-    <div class="popper"></div>
+    <!-- <div class="popper"></div>
     <div style="height: 70vh;" class=" container justify-content-center d-flex align-items-center flex-column gap-4">
         <img src="../assets/images/thankyou.gif" alt="thank you" style="margin-top: 5em; " class="img-fluid">
-        <button class="btn btn-success">Continue Shopping</button>
+        <button class="btn btn-success" routerLink="/">Continue Shopping</button>
+    </div> -->
+    <div class="container">
+    <ngb-accordion [closeOthers]="true" activeIds="static-1" class="accordion-dark">
+        
+        <ngb-panel id="static-1" cl>
+            <ng-template ngbPanelTitle>
+                <button class="btn btn-primary btn-sm">1</button> <span class="fs-6 ps-3 fw-bold cap text-dark">LOGIN OR SIGNUP</span>
+            </ng-template>
+          <ng-template ngbPanelContent>
+            <div class="row px-4 py-2">
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column gap-4 px-4">
+                    <input type="text" placeholder="Enter email/mobile number" class="form-control shadow-none rounded-0 border-top-0 border-end-0 border-start-0">
+                    <p class="fs-6 text-secondary">By continuing, you agree to shopNow's Terms of Use and Privacy Policy.</p>
+                    <button class=" w-100 btn btn-warning rounded-0">Continue</button>
+                </div>
+                <div class="col-6">
+                    <span class="text-secondary fs-6"> Advantages of our secure login</span>
+                    <p class="mt-4"> <fa-icon [icon]="faTruck"></fa-icon> Easily Track Orders, Hassle free Returns</p>
+                    <p> <fa-icon [icon]="faBell"></fa-icon> Get Relevant Alerts and Recommendation</p>
+                    <p><fa-icon [icon]="faStar"></fa-icon> Wishlist, Reviews, Ratings and more.</p>
+                </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="static-2">
+          <ng-template ngbPanelTitle>
+            <button class="btn btn-primary btn-sm">2</button> <span class="fs-6 ps-3 fw-bold cap text-dark">DELIVERY ADDRESS</span>
+          </ng-template>
+          <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+            labore sustainable VHS.
+          </ng-template>
+        </ngb-panel>
+
+        <ngb-panel id="static-3" [disabled]="false">
+            <ng-template ngbPanelTitle>
+                <button class="btn btn-primary btn-sm">3</button> <span class="fs-6 ps-3 fw-bold cap text-dark">PAYMENT OPTIONS</span>
+              </ng-template>
+          <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+            labore sustainable VHS.
+          </ng-template>
+        </ngb-panel>
+
+      </ngb-accordion>
     </div>
 </div>

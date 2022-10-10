@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
