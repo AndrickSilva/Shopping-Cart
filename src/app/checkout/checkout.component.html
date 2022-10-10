@@ -37,19 +37,19 @@
 
             <form action="/">
             <div class="d-flex justify-content-around flex-wrap align-content-start">
-                <div class="mb-3">
+                <div class="mb-3 w-100">
                     <label for="exampleFormControlInput1" class="form-label">Pincode</label>
                     <input type="number onwheel= this.blur()" class="form-control" id="exampleFormControlInput1" placeholder="403716">
                   </div>
-                <div class="mb-3">
+                <div class="mb-3 w-100">
                     <label for="exampleFormControlInput1" class="form-label">State</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Goa">
                   </div>
-                <div class="mb-3">
+                <div class="mb-3 w-100">
                     <label for="exampleFormControlInput1" class="form-label">City</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Margao">
                   </div>
-                <div class="mb-3">
+                <div class="mb-3 w-100">
                     <label for="exampleFormControlInput1" class="form-label">HNO</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="1613/2">
                   </div>
@@ -65,12 +65,26 @@
                 <button class="btn btn-primary btn-sm">3</button> <span class="fs-6 ps-3 fw-bold cap text-dark">PAYMENT OPTIONS</span>
               </ng-template>
           <ng-template ngbPanelContent>
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-            aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-            sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-            occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-            labore sustainable VHS.
+
+            <div class="py-4">
+                <div class="form-check ">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">UPI</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">Card Payment</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <label class="form-check-label" for="flexRadioDefault3">Net Banking</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <label class="form-check-label" for="flexRadioDefault3">Cash on Delivery</label>
+                  </div>
+            </div>
+              
           </ng-template>
         </ngb-panel>
 
