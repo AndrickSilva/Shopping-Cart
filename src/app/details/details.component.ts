@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private http: HttpClient, private api: ProdApiService) { }
 
   itemId!: string | null
-  Url: string = 'http://localhost:3000/products/'  //change url
+  Url: string = 'http://localhost:3000/products/' 
   newUrl!: string
   items!: any
 

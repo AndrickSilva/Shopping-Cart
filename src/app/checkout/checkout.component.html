@@ -8,10 +8,9 @@
     <div class="container">
         <ngb-accordion [closeOthers]="true" activeIds="static-1" class="accordion-dark">
 
-            <ngb-panel id="static-1" cl>
+            <ngb-panel id="static-1" >
                 <ng-template ngbPanelTitle>
-                    <button class="btn btn-primary btn-sm">1</button> <span
-                        class="fs-6 ps-3 fw-bold cap text-dark">LOGIN OR SIGNUP</span>
+                    <button ngbPanelToggle class="btn btn-primary btn-sm">1</button> <span class="fs-6 ps-3 fw-bold cap text-dark">LOGIN OR SIGNUP</span>
                 </ng-template>
                 <ng-template ngbPanelContent>
                     <div class="row px-md-4 py-2">
@@ -42,8 +41,7 @@
 
             <ngb-panel id="static-2">
                 <ng-template ngbPanelTitle>
-                    <button class="btn btn-primary btn-sm">2</button> <span
-                        class="fs-6 ps-3 fw-bold cap text-dark">DELIVERY ADDRESS</span>
+                    <button ngbPanelToggle class="btn btn-primary btn-sm">2</button> <span class="fs-6 ps-3 fw-bold cap text-dark">DELIVERY ADDRESS</span>
                 </ng-template>
                 <ng-template ngbPanelContent>
 
@@ -69,8 +67,7 @@
                                     placeholder="1613/2">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center py-3"><button
-                                class="btn btn-primary shadow-0 rounded-0 w-50 ">Save Address</button></div>
+                        <div class="d-flex justify-content-center py-3"><button class="btn btn-primary shadow-0 rounded-0 w-50 ">Save Address</button></div>
                     </form>
 
                 </ng-template>
@@ -78,8 +75,7 @@
 
             <ngb-panel id="static-3" [disabled]="false">
                 <ng-template ngbPanelTitle>
-                    <button class="btn btn-primary btn-sm">3</button> <span
-                        class="fs-6 ps-3 fw-bold cap text-dark">PAYMENT OPTIONS</span>
+                    <button ngbPanelToggle class="btn btn-primary btn-sm">3</button> <span class="fs-6 ps-3 fw-bold cap text-dark">PAYMENT OPTIONS</span>
                 </ng-template>
                 <ng-template ngbPanelContent>
 
